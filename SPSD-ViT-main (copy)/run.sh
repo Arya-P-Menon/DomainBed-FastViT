@@ -1,0 +1,51 @@
+#for command in delete_incomplete launch
+#do
+#  python -m domainbed.scripts.sweep ${command} --data_dir=./data \
+#  --output_dir=./output --command_launcher "multi_gpu" --algorithms ERM_SPSDViT \
+#  --single_test_envs  --datasets DR --n_hparams 1 --n_trials 3  \
+#  --hparams """{\"backbone\":\"CVTSmall\",\"batch_size\":16,\"lr\":5e-05,\"resnet_dropout\":0.0,\"weight_decay\":0.0}"""
+#done
+
+
+#for command in delete_incomplete launch
+#do
+#  python -m domainbed.scripts.sweep_updated ${command} --data_dir=./data \
+#  --output_dir=./output_SDG --command_launcher "multi_gpu" --algorithms ERM_SPSDViT \
+#  --single_domain_generalization  --datasets DR --n_hparams 1 --n_trials 3  \
+#  --hparams """{\"backbone\":\"CVTSmall\",\"batch_size\":16,\"lr\":5e-05,\"resnet_dropout\":0.0,\"weight_decay\":0.0}"""
+#done
+
+##########################################################################
+
+for command in delete_incomplete launch
+do
+  python -m domainbed.scripts.sweep ${command} --data_dir=./data \
+  --output_dir=./output_CMT/XS_Multi --command_launcher "multi_gpu" --algorithms ERM_SPSDViT \
+  --single_test_envs  --datasets DR --n_hparams 1 --n_trials 3  \
+  --hparams """{\"backbone\":\"CMTXSmall\",\"batch_size\":16,\"lr\":5e-05,\"resnet_dropout\":0.0,\"weight_decay\":0.0}"""
+done
+
+#for command in delete_incomplete launch
+#do
+#  python -m domainbed.scripts.sweep_updated ${command} --data_dir=./data \
+#  --output_dir=./output_CMT/XS_Single --command_launcher "multi_gpu" --algorithms ERM_SPSDViT \
+#  --single_domain_generalization  --datasets DR --n_hparams 1 --n_trials 3  \
+#  --hparams """{\"backbone\":\"CMTXSmall\",\"batch_size\":16,\"lr\":5e-05,\"resnet_dropout\":0.0,\"weight_decay\":0.0}"""
+#done
+
+#####################################################################################
+#for command in delete_incomplete launch
+#do
+#  python -m domainbed.scripts.sweep ${command} --data_dir=./data \
+#  --output_dir=./output_CMT/Tiny_Multi --command_launcher "multi_gpu" --algorithms ERM_SPSDViT \
+#  --single_test_envs  --datasets DR --n_hparams 1 --n_trials 3  \
+#  --hparams """{\"backbone\":\"CMTTiny\",\"batch_size\":16,\"lr\":5e-05,\"resnet_dropout\":0.0,\"weight_decay\":0.0}"""
+#done
+
+#for command in delete_incomplete launch
+#do
+#  python -m domainbed.scripts.sweep_updated ${command} --data_dir=./data \
+#  --output_dir=./output_CMT/Tiny_Single --command_launcher "multi_gpu" --algorithms ERM_SPSDViT \
+#  --single_domain_generalization  --datasets DR --n_hparams 1 --n_trials 3  \
+#  --hparams """{\"backbone\":\"CMTTiny\",\"batch_size\":16,\"lr\":5e-05,\"resnet_dropout\":0.0,\"weight_decay\":0.0}"""
+#done
