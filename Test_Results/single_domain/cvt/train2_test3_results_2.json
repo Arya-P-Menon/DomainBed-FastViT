@@ -1,8 +1,0 @@
-{
-    "accuracy": 0.5349770642201835,
-    "precision": 0.40212780531893166,
-    "recall": 0.421941057734177,
-    "f1_score": 0.3152417223144506,
-    "avg_inference_time_per_sample_sec": 0.002196288300216745,
-    "num_trainable_parameters": 31239621
-}
